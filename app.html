@@ -1,0 +1,951 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Activation Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            color: #1a1a2e;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a4a68;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #5548d9;
+        }
+
+        .cta-button {
+            background: #5548d9;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #4239b8;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #6b6b7e;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #5548d9;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #4239b8;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #5548d9;
+            padding: 14px 28px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: #5548d9;
+        }
+/*
+        .hero-image {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 80px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+*/
+        .hero-image {
+  width: 500px;       /* Fixed width */
+  height: 400px;      /* Fixed height */
+  background: #f9fafb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;   /* Prevent overflow from animation */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.hero-image lottie-player {
+  width: 100%;
+  height: 100%;
+}
+        .image-icon {
+            width: 60px;
+            height: 60px;
+            border: 2px dashed #c0c0c8;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .image-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: #999;
+        }
+
+        .image-placeholder {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .vision-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .vision-image {
+            width: 500px;       /* fixed width */
+            height: 500px;      /* fixed height */
+            background: #fafafa;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .vision-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1a1a2e;
+        }
+
+        .vision-text p {
+            font-size: 16px;
+            color: #6b6b7e;
+            margin-bottom: 20px;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #6b6b7e;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .program-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s;
+        }
+
+        .program-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .program-icon {
+            width: 50px;
+            height: 50px;
+            background: #f0edff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .program-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .program-card p {
+            font-size: 15px;
+            color: #6b6b7e;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .instructor-info {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .view-details {
+            color: #5548d9;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .view-details:hover {
+            gap: 8px;
+        }
+
+        /* GenAI Section */
+        .genai-section {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .genai-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .genai-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1a1a2e;
+        }
+
+        .genai-text p {
+            font-size: 16px;
+            color: #6b6b7e;
+            margin-bottom: 30px;
+        }
+
+        .learn-more-btn {
+            background: #5548d9;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .genai-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: #4a4a68;
+            font-weight: 600;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: #4a4a68;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .author-info h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 3px;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .cta-content {
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .cta-content p {
+            font-size: 16px;
+            color: #6b6b7e;
+            margin-bottom: 30px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            background: white;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #6b6b7e;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #5548d9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #5548d9;
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #e8e8e8;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .vision-content {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .genai-content {
+                grid-template-columns: 1fr;
+            }
+
+            .genai-features {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .genai-features {
+                grid-template-columns: 1fr;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">A</div>
+                    AI Activation Academy
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+                <button class="cta-button">Join the Academy</button>
+                <button class="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Activate Your AI Potential</h1>
+                <p>Master generative AI to ideate, design, and deploy like a pro. Start your journey with our expert-led courses.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Start Learning</button>
+                    <button class="btn-secondary">Join Now</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!--
+                <div class="image-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                </div>-->
+            <lottie-player 
+                src="assets/animations/Work_Hard.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 100%; height: 100%;">
+        </lottie-player>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-image">
+                    <!--<div class="image-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>-->
+                    <lottie-player
+                        src="assets/animations/Technology.json"
+                        background="transparent"
+                        speed="1"
+                        loop
+                        autoplay
+                        style="width: 100%; height: 100%;">
+                    </lottie-player>
+                
+                </div>
+                <div class="vision-text">
+                    <h2>Our Vision for the Future of Creation</h2>
+                    <p>We believe the future of creation is collaborative, where human ingenuity is amplified—not supplanted—with the power of Generative AI. Productivity is rooted in the belief that AI is not a "replacement" for human ingenuity, but a powerful AI partner that can augment our creative potential. We're dedicated to demystifying AI and making it an accessible, practical tool for innovation from all backgrounds.</p>
+                    <p>Our curriculum is designed to teach the effective use of AI tools for ideation, design, content creation, and app development. By providing hands-on training, we empower professionals to not just use AI but to think with it, enabling them to innovate and lead in the new digital landscape. The impact of our approach is a community of forward-thinking creators ready to fulfill the next generation of digital products and experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Programs</h2>
+                <p>Expert-led courses to take you from concept to creation.</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon" style="background: #f0edff;">
+                        <svg width="24" height="24" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m5.66-13.66l-4.24 4.24m0 6l-4.24 4.24m13.66-5.66h-6m-6 0H1"/>
+                        </svg>
+                    </div>
+                    <h3>AI Foundations</h3>
+                    <p>Grasp the fundamental concepts of machine learning, neural networks, and large language models to build a solid base for your AI journey.</p>
+                    <p class="instructor-info">Instructors: Dr. Anu Raj</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon" style="background: #e8f4ff;">
+                        <svg width="24" height="24" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Applied Agents</h3>
+                    <p>Dive into practical applications by building and deploying intelligent AI agents that can reason, learn, and perform complex tasks autonomously.</p>
+                    <p class="instructor-info">Instructors: Maria Chan</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon" style="background: #fff0f0;">
+                        <svg width="24" height="24" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3>AI Productization</h3>
+                    <p>Master the end-to-end process of taking your AI models from a promising prototype to a scalable, market-ready product that delivers real value.</p>
+                    <p class="instructor-info">Instructors: Sam Richie & Jan Vector</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GenAI Section -->
+    <section class="genai-section">
+        <div class="container">
+            <div class="genai-content">
+                <div class="genai-text">
+                    <h2>GenAI: Revolutionizing Software Development</h2>
+                    <p>Generative AI is transforming the way we build software. From automating code generation to accelerating debugging and enhancing UI design, AI-powered tools are becoming indispensable for modern developers. Embrace this shift to boost productivity, foster innovation, and build more robust, intelligent applications faster than ever before.</p>
+                    <button class="learn-more-btn">Learn More →</button>
+                </div>
+                <div class="genai-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <p>Smart Code</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <p>Rapid Debugging</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="30" height="30" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="7" height="7"/>
+                                <rect x="14" y="3" width="7" height="7"/>
+                                <rect x="14" y="14" width="7" height="7"/>
+                                <rect x="3" y="14" width="7" height="7"/>
+                            </svg>
+                        </div>
+                        <p>UI/UX Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Students Say</h2>
+                <p>Real stories from creators and professionals who have activated their potential.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The AI Foundations course was an eye-opener. It broke down complex topics into digestible lessons, giving me the confidence to experiment with my creative workflow. The hands-on projects were truly invaluable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Sarah L.</h4>
+                            <p>UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a developer, the Applied Agents course was a game-changer. I went from theory to building a functional AI chatbot with real-world mentorship and community support were outstanding."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Michael R.</h4>
+                            <p>Senior Software Automation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The AI Productization course is essential for any PM. It perfectly bridges the gap between AI innovation and how to launch and scale in a sustainable, efficient manner."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Chloe K.</h4>
+                            <p>Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the Academy Today</h2>
+                <p>Sign up for updates on new courses, workshops, and exclusive content.</p>
+                <form class="email-form">
+                    <input type="email" class="email-input" placeholder="Enter your email">
+                    <button type="submit" class="cta-button">Join Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">A</div>
+                        AI Activation Academy
+                    </div>
+                    <p>Empowering the next wave of AI-driven creators and innovators.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 AI Activation Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

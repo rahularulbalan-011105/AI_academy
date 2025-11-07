@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Activation Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4338ca",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101322",
+                        "text-light": "#2D3748",
+                        "text-dark": "#F7FAFC",
+                        "section-light": "#F7FAFC",
+                        "section-dark": "#181C30",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(1rem)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .course-card {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+<a class="flex items-center gap-3" href="#hero">
+<div class="text-primary size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold">AI Activation Academy</h2>
+</a>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium hover:text-primary" href="#about">About Us</a>
+<a class="text-sm font-medium hover:text-primary" href="#courses">Courses</a>
+<a class="text-sm font-medium hover:text-primary" href="#testimonials">Testimonials</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-sm transition-transform duration-200 hover:scale-105" href="#join">
+<span class="truncate">Join the Academy</span>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="py-20 sm:py-24 lg:py-32" id="hero">
+<div class="container mx-auto max-w-6xl px-4">
+<div class="flex flex-col items-center gap-12 text-center lg:flex-row lg:items-start lg:text-left">
+<div class="flex flex-col gap-6 lg:w-1/2">
+<h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Activate Your AI Potential</h1>
+<h2 class="text-base font-normal sm:text-lg">Master generative AI to ideate, design, and deploy like a pro. Start your journey with our expert-led courses.</h2>
+<div class="flex flex-wrap justify-center gap-4 lg:justify-start">
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-lg transition-transform duration-200 hover:scale-105" href="#courses">
+<span class="truncate">Start Learning</span>
+</a>
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gray-200 dark:bg-gray-700 text-text-light dark:text-text-dark text-base font-bold shadow transition-colors hover:bg-gray-300 dark:hover:bg-gray-600" href="#join">
+<span class="truncate">Join Now</span>
+</a>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="aspect-video w-full rounded-xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-700" data-alt="Placeholder for a new image.">
+<div class="text-center text-gray-500 dark:text-gray-400">
+<svg aria-hidden="true" class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 48 48">
+<path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 4v.01M28 8l-6 6h6V8zM20 40h12a4 4 0 004-4V20M4 20v12a4 4 0 004 4h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<p class="mt-2 text-sm font-semibold">Image coming soon</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-section-light dark:bg-section-dark" id="about">
+<div class="container mx-auto max-w-6xl px-4">
+<div class="flex flex-col items-center gap-12 lg:flex-row">
+<div class="lg:w-1/3">
+<div class="aspect-square w-full rounded-xl bg-gray-200 dark:bg-gray-800 flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-700">
+<div class="text-center text-gray-500 dark:text-gray-400">
+<svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<p class="mt-2 text-sm font-semibold">Illustration here</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 text-center lg:w-2/3 lg:text-left">
+<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Vision for the Future of Creation</h2>
+<p class="text-base font-normal leading-relaxed">We aim to cultivate a new class of creators who blend artistic creativity and design judgment with the power of Generative AI. Our philosophy is rooted in the belief that AI is not a replacement for human ingenuity but a powerful partner that can augment our creative potential. We're dedicated to demystifying AI and making it an accessible, practical tool for innovators from all backgrounds.</p>
+<p class="text-base font-normal leading-relaxed">Our curriculum is designed to teach the effective use of AI tools for ideation, design, content creation, and app development. By providing hands-on training, we empower professionals to not just use AI, but to think with it, enabling them to innovate and lead in the new digital landscape. The impact of our approach is a community of forward-thinking creators ready to build the next generation of digital products and experiences.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="relative py-16 sm:py-20 lg:py-24 overflow-hidden" id="courses">
+<div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-transparent to-transparent dark:from-primary/20"></div>
+<div class="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-primary/5 dark:bg-primary/10 blur-3xl animate-[spin_20s_linear_infinite]"></div>
+<div class="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-indigo-500/5 dark:bg-indigo-500/10 blur-3xl animate-[spin_20s_linear_infinite_reverse]"></div>
+<div class="container mx-auto max-w-6xl px-4">
+<div class="mb-12 flex flex-col items-center text-center">
+<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Core Programs</h2>
+<p class="mt-2 text-base font-normal">Expert-led courses to take you from concept to creation.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<a class="course-card group relative overflow-hidden flex flex-col gap-4 rounded-xl border border-white/20 dark:border-white/10 bg-white/60 dark:bg-section-dark/50 p-6 shadow-lg backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:hover:shadow-primary/20 animate-fade-in-up" href="#" style="animation-delay: 100ms;">
+<div class="absolute top-0 left-0 h-full w-full bg-gradient-to-br from-white/10 to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-100"></div>
+<div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="relative z-10 text-xl font-bold">AI Foundations</h3>
+<p class="relative z-10 text-base font-normal">Grasp the fundamental concepts of machine learning, neural networks, and large language models to build a solid base for your AI journey.</p>
+<div class="relative z-10 mt-4 border-t border-gray-400/30 dark:border-gray-500/30 pt-4">
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400">Instructor: Dr. Alex Ray</p>
+</div>
+<div class="relative z-10 mt-auto text-sm font-bold text-primary group-hover:underline">View Details →</div>
+</a>
+<a class="course-card group relative overflow-hidden flex flex-col gap-4 rounded-xl border border-white/20 dark:border-white/10 bg-white/60 dark:bg-section-dark/50 p-6 shadow-lg backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:hover:shadow-primary/20 animate-fade-in-up" href="#" style="animation-delay: 200ms;">
+<div class="absolute top-0 left-0 h-full w-full bg-gradient-to-br from-white/10 to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-100"></div>
+<div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h3 class="relative z-10 text-xl font-bold">Applied Agents</h3>
+<p class="relative z-10 text-base font-normal">Dive into practical applications by building and deploying intelligent AI agents that can reason, learn, and perform complex tasks autonomously.</p>
+<div class="relative z-10 mt-4 border-t border-gray-400/30 dark:border-gray-500/30 pt-4">
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400">Instructor: Maria Chen</p>
+</div>
+<div class="relative z-10 mt-auto text-sm font-bold text-primary group-hover:underline">View Details →</div>
+</a>
+<a class="course-card group relative overflow-hidden flex flex-col gap-4 rounded-xl border border-white/20 dark:border-white/10 bg-white/60 dark:bg-section-dark/50 p-6 shadow-lg backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:hover:shadow-primary/20 animate-fade-in-up" href="#" style="animation-delay: 300ms;">
+<div class="absolute top-0 left-0 h-full w-full bg-gradient-to-br from-white/10 to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-100"></div>
+<div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h3 class="relative z-10 text-xl font-bold">AI Productization</h3>
+<p class="relative z-10 text-base font-normal">Master the end-to-end process of taking your AI models from a promising prototype to a scalable, market-ready product that delivers real value.</p>
+<div class="relative z-10 mt-4 border-t border-gray-400/30 dark:border-gray-500/30 pt-4">
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400">Instructors: Sam Orbital &amp; Jen Vector</p>
+</div>
+<div class="relative z-10 mt-auto text-sm font-bold text-primary group-hover:underline">View Details →</div>
+</a>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 lg:py-24">
+<div class="container mx-auto max-w-6xl px-4">
+<div class="relative overflow-hidden rounded-xl bg-section-light dark:bg-section-dark shadow-xl">
+<div class="absolute inset-0 -z-10">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
+</div>
+<div class="flex flex-col gap-12 p-8 lg:flex-row lg:items-center lg:p-12">
+<div class="flex flex-col gap-4 text-center lg:w-1/2 lg:text-left">
+<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">GenAI: Revolutionizing Software Development</h2>
+<p class="text-base font-normal leading-relaxed text-gray-700 dark:text-gray-300">Generative AI is transforming the way we build software. From automating code generation to accelerating debugging and enhancing UI design, AI-powered tools are becoming indispensable for modern developers. Embrace this shift to boost productivity, foster innovation, and build more robust, intelligent applications faster than ever before.</p>
+<a class="mx-auto mt-4 flex w-fit cursor-pointer items-center justify-center gap-2 rounded-lg h-11 px-6 bg-primary text-white text-base font-bold shadow-lg transition-transform duration-200 hover:scale-105 lg:mx-0" href="#">
+<span class="truncate">Learn More</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-3 gap-4 lg:w-1/2">
+<div class="flex h-64 w-full items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-gray-200 dark:border-gray-700 dark:bg-gray-800">
+<div class="text-center text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-4xl">code</span>
+<p class="mt-1 text-xs font-semibold">AI Code Gen</p>
+</div>
+</div>
+<div class="flex h-64 w-full items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-gray-200 dark:border-gray-700 dark:bg-gray-800">
+<div class="text-center text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-4xl">bug_report</span>
+<p class="mt-1 text-xs font-semibold">Smart Debugging</p>
+</div>
+</div>
+<div class="flex h-64 w-full items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-gray-200 dark:border-gray-700 dark:bg-gray-800">
+<div class="text-center text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-4xl">design_services</span>
+<p class="mt-1 text-xs font-semibold">UI/UX Design</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 bg-section-light dark:bg-section-dark" id="testimonials">
+<div class="container mx-auto max-w-6xl px-4">
+<div class="mb-12 flex flex-col items-center text-center">
+<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">What Our Students Say</h2>
+<p class="mt-2 text-base font-normal">Real stories from creators and professionals who have activated their potential.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col rounded-xl bg-background-light dark:bg-background-dark p-6 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="flex-grow">
+<p class="mb-4 text-base leading-relaxed italic text-gray-700 dark:text-gray-300">"The AI Foundations course was an eye-opener. It broke down complex topics into digestible lessons, giving me the confidence to integrate AI into my creative workflow. The hands-on projects were invaluable."</p>
+</div>
+<div class="mt-auto flex items-center gap-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Portrait of Sarah L." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqxvUy7vCLp3jHyDQOsBBxJriXjaU9HmbOioK5gDBHhHTxGgV2Z70ibtuRHhQqKtv9zWZflqFCukAmGlrzcPF_vHf_SScCSHLq9359simFO1z77ihVLF5UrSLMIqYOilP6kXOP0qzF3hiv-iEv1lvhSXoi8sp9G4_ptxQ9BDYiPNMkhzagf20ube0Ad0yewE85ccwmdVf9Guku7BOWtjhI_YAjV8p-zVcETGwQlc7LgyQW6EbSOlWRaI6bdQLc4tM3kC062zfCFVIG"/>
+<div>
+<p class="font-bold">Sarah L.</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">UX Designer</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col rounded-xl bg-background-light dark:bg-background-dark p-6 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="flex-grow">
+<p class="mb-4 text-base leading-relaxed italic text-gray-700 dark:text-gray-300">"As a developer, the Applied Agents course was a game-changer. I went from theory to building a functional AI agent for my startup in weeks. The mentorship and community support were outstanding."</p>
+</div>
+<div class="mt-auto flex items-center gap-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Portrait of Michael B." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANNDoddQfHmsLN0YcWs4CbsllYScIiItmpJL-L03HLt8UAiQqlD2ENQHEXLRZ_Cr5jRKyD1g3dLSO2LMgSPwIK1CVqef7TRm611ugsf6t-sPCkmv0kZzTl3JJXBP_gC9fA8w2NVqAl6VA8qRY0PnM6egVbdVzh3jMmcigj0xNplSk-Jlq6qJrBptffgUwEySLlOwqey_lSk_ciZOx_OvowadQhJ-y92OyOP2e-yhugrbn79WixjL5kym3zU9DAKvq9bQ2jIARTqDNv"/>
+<div>
+<p class="font-bold">Michael B.</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Founder &amp; CTO, Automatech</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col rounded-xl bg-background-light dark:bg-background-dark p-6 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="flex-grow">
+<p class="mb-4 text-base leading-relaxed italic text-gray-700 dark:text-gray-300">"The AI Productization course is essential for any PM. It perfectly bridges the gap between technical models and go-to-market strategy. I now have a clear framework for launching AI-powered features."</p>
+</div>
+<div class="mt-auto flex items-center gap-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Portrait of Chloe K." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx29sAeJUa76WUYwQDV3vKqntDGWna1LfYMBQeS7RhD_SXD2wwtdySJ5q-_VMgngZoqkdeMz8P22qb-HFqsrSz_-GIj9FPOuC0kHSBpxE_zyL9lGSpb8PC3K_RigU-UsUy_3DDlsidxrF4_-8xWhUIPWJlc1mJaU1w9gcxHwLp9xCXdQid3SCI2UvDw-JgemME65rWcZSSaKGFUi8lbdtgGI_siF9w8jKB8rR5pWUmZ0IddDRK55el4O9_NGeLj-h4_gIH2KGwytT2"/>
+<div>
+<p class="font-bold">Chloe K.</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Senior Product Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 lg:py-24" id="join">
+<div class="container mx-auto max-w-2xl px-4">
+<div class="flex flex-col items-center gap-6 text-center">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Join the Academy Today</h2>
+<p class="text-base font-normal text-gray-700 dark:text-gray-300">Sign up for updates on new courses, workshops, and exclusive content.</p>
+<form class="flex w-full max-w-md flex-col gap-4 sm:flex-row">
+<input class="w-full flex-grow rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-section-dark px-4 py-2.5 focus:border-primary focus:ring-primary" placeholder="Enter your email" type="email"/>
+<button class="flex items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-base font-bold shadow-lg transition-transform duration-200 hover:scale-105 whitespace-nowrap" type="submit">
+                                Join Now
+                            </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-section-light dark:bg-section-dark py-12">
+<div class="container mx-auto max-w-6xl px-4">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-3">
+<div class="text-primary size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold">AI Activation Academy</h3>
+</div>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Empowering the next wave of AI innovators.</p>
+</div>
+<div>
+<h4 class="font-bold">Navigation</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="hover:text-primary" href="#about">About</a></li>
+<li><a class="hover:text-primary" href="#courses">Courses</a></li>
+<li><a class="hover:text-primary" href="#testimonials">Testimonials</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold">Legal</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold">Follow Us</h4>
+<div class="mt-4 flex space-x-4">
+<a class="text-gray-500 hover:text-primary" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-gray-500 hover:text-primary" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-gray-500 hover:text-primary" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H6.34C3.963 1 2 2.962 2 5.337v13.326C2 21.038 3.963 23 6.34 23h11.328c2.378 0 4.332-1.962 4.332-4.337V5.337C22 2.962 20.046 1 17.668 1z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-gray-300 dark:border-gray-700 pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+<p>© 2024 AI Activation Academy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
