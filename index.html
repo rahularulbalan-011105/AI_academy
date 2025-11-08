@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="script.js"></script>
     <style>
         * {
             margin: 0;
@@ -82,7 +83,7 @@
         }
 
         .cta-button {
-            background: #5548d9;
+            background: linear-gradient(135deg, #5548d9, #7b61ff);
             color: white;
             border: none;
             padding: 12px 24px;
@@ -359,7 +360,7 @@
         }
 
         .learn-more-btn {
-            background: #5548d9;
+            /*background: #5548d9;
             color: white;
             padding: 12px 24px;
             border: none;
@@ -369,8 +370,39 @@
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 8px;*/
         }
+        .learn-more-btn {
+            background: linear-gradient(135deg, #5548d9, #7b61ff);
+            color: white;
+            padding: 14px 36px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(85, 72, 217, 0.25);
+            }
+
+            .learn-more-btn:hover {
+            background: linear-gradient(135deg, #4239b8, #6c4afc);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(85, 72, 217, 0.35);
+            }
+
+            /* Align it neatly within the GenAI section */
+.genai-text {
+  text-align: left;
+}
+
+.genai-text .learn-more-btn {
+  margin-left: 2.5rem; /* aligns it under the bullet list */
+}
+
 
         
 
@@ -671,6 +703,102 @@
                 width: 100%;
             }
         }
+        /* --- Global Responsive Enhancements --- */
+        img, video, lottie-player {
+        max-width: 100%;
+        height: auto;
+        }
+
+        /* Fix for bullet list alignment in GenAI section */
+        .genai-text ul {
+        list-style-type: disc;
+        margin-left: 2rem;
+        padding-left: 1rem;
+        line-height: 1.8;
+        }
+
+        /* Allow text and animation to stack on smaller screens */
+        @media (max-width: 1024px) {
+        .hero-grid,
+        .vision-content,
+        .genai-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .hero-image,
+        .vision-image,
+        .feature-icon {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+        }
+
+        .vision-text h2,
+        .genai-text h2 {
+            font-size: 2rem;
+        }
+
+        .genai-text p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        }
+
+        /* Make course cards stack neatly on tablet and mobile */
+        @media (max-width: 900px) {
+        .programs-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        }
+
+        @media (max-width: 600px) {
+        .programs-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .program-card {
+            text-align: center;
+        }
+
+        .program-icon {
+            margin: 0 auto 15px;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            width: 100%;
+        }
+        }
+
+        /* Footer fix for smaller devices */
+        @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            justify-content: center;
+        }
+        }
+
     </style>
 </head>
 <body>
@@ -687,7 +815,8 @@
                     <li><a href="#courses">Courses</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                 </ul>
-                <button class="cta-button">Join the Academy</button>
+                <button class="cta-button" id="join-header-btn">Join the Academy</button>
+
                 <button class="mobile-menu-btn">☰</button>
             </nav>
         </div>
@@ -728,7 +857,7 @@
     </section>
 
     <!-- Vision Section -->
-    <section class="vision-section">
+    <section id="about" class="vision-section fade-in">
         <div class="container">
             <div class="vision-content">
                 <div class="vision-image">
@@ -758,7 +887,7 @@
     </section>
 
     <!-- Programs Section -->
-    <section class="programs-section">
+    <section id="courses" class="programs-section fade-in">
         <div class="container">
             <div class="section-header">
                 <h2>Our Core Programs</h2>
@@ -834,19 +963,26 @@
     </section>
 
     <!-- GenAI Section -->
-    <section class="genai-section">
+    <section class="genai-section fade-in">
         <div class="container">
             <div class="genai-content">
                 <div class="genai-text">
                     <h2>Empowering the Next Generation of AI Talent</h2>
-                    <p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI and we’re here to help you do just that." Horizontal infographic or stat highlights:
+                    <!--<p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI and we’re here to help you do just that." Horizontal infographic or stat highlights:
                         <ul style="list-style-type: disc; margin-left: 3rem; line-height: 1.8;">
                             <li>80% of jobs will require AI skills by 2030</li>
                             <li>Generative AI adoption up 400% since 2023</li>
                             <li>Global AI talent gap widening every year</li>
                         </ul>
 
-                    </p>
+                    </p>-->
+                    <p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI — and we’re here to help you do just that.</p>
+
+                        <ul style="list-style-type: disc; margin-left: 2.5rem; line-height: 1.8; font-size: 16px;">
+                            <li>80% of jobs will require AI skills by 2030</li>
+                            <li>Generative AI adoption up 400% since 2023</li>
+                            <li>Global AI talent gap widening every year</li>
+                        </ul>
                     <button class="learn-more-btn">Learn More →</button>
                 </div>
                 <div class="genai-features">
@@ -874,7 +1010,8 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials-section">
+    <section id="testimonials" class="testimonials-section fade-in">
+
         <div class="container">
             <div class="section-header">
                 <h2>What Our Students Say</h2>
@@ -918,7 +1055,8 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section id="join" class="cta-section fade-in">
+
         <div class="container">
             <div class="cta-content">
                 <h2>Join the Academy Today</h2>
