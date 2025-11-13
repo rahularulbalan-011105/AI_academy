@@ -134,34 +134,44 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ---------- 6️⃣ Animated Stats (Number Counter) ----------
-  const counters = document.querySelectorAll('.genai-text li');
-  const animateCounters = () => {
-    counters.forEach(counter => {
-      const text = counter.innerText;
-      const number = text.match(/\d+/g);
-      if (number) {
-        const num = parseInt(number[0]);
-        let count = 0;
-        const interval = setInterval(() => {
-          count += Math.ceil(num / 50);
-          if (count >= num) {
-            clearInterval(interval);
-            counter.innerText = text.replace(number[0], num);
-          } else {
-            counter.innerText = text.replace(number[0], count);
-          }
-        }, 30);
-      }
-    });
-  };
+// ---------- 6️⃣ Animated Stats (Number Counter) FIXED ----------
+const counters = document.querySelectorAll('.ai-stats li');
 
-  const statSection = document.querySelector('.genai-section');
-  if (statSection) {
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) animateCounters();
-    }, { threshold: 0.4 });
-    observer.observe(statSection);
-  }
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const numberSpan = counter.querySelector("span");
+    if (!numberSpan) return;
+
+    const text = numberSpan.innerText;
+    const number = text.match(/\d+/);
+
+    if (!number) return;
+
+    const target = parseInt(number[0]);
+    let count = 0;
+
+    const interval = setInterval(() => {
+      count += Math.ceil(target / 50);
+
+      if (count >= target) {
+        clearInterval(interval);
+        numberSpan.innerText = text.replace(number[0], target);
+      } else {
+        numberSpan.innerText = text.replace(number[0], count);
+      }
+    }, 30);
+  });
+};
+
+const statSection = document.querySelector('.genai-section');
+if (statSection) {
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) animateCounters();
+  }, { threshold: 0.4 });
+
+  observer.observe(statSection);
+}
+
 
   // ---------- 7️⃣ Testimonials Highlight on Click ----------
   document.querySelectorAll('.testimonial-card').forEach(card => {
