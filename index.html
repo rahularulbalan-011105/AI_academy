@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="script.js"></script>
+  
+
     <style>
         * {
             margin: 0;
@@ -619,6 +621,26 @@
             font-size: 24px;
             cursor: pointer;
         }
+       
+
+/* FIX AI STATS ICONS */
+.ai-stats li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    line-height: 1.8rem !important;
+}
+
+.ai-stats li svg {
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    opacity: 1 !important;
+    stroke: #5548d9;
+}
+
 
         /* Responsive Design */
         @media (max-width: 968px) {
@@ -711,7 +733,6 @@
 
         /* Fix for bullet list alignment in GenAI section */
         .genai-text ul {
-        list-style-type: disc;
         margin-left: 2rem;
         padding-left: 1rem;
         line-height: 1.8;
@@ -869,7 +890,7 @@
                         </svg>
                     </div>-->
                     <lottie-player
-                        src="assets/animations/Technology.json"
+                        src="assets/animations/our_vision.json"
                         background="transparent"
                         speed="1"
                         loop
@@ -879,8 +900,101 @@
                 
                 </div>
                 <div class="vision-text">
-                    <h2>Our Vision for the Future of Creation</h2>
-                    <p>We believe the next wave of innovation will be powered by people who understand AI deeply. Our mission is to help students build those skills through hands-on learning, real projects, and expert mentorship</p>
+                    <h2>Our Vision for the Future of Work</h2>
+                    <p>AI is no longer a niche skill! It’s fast becoming a <b>core capability</b> for every professional.
+Whether you’re in marketing, finance, design, operations, or engineering, knowing how to work with AI gives you a powerful edge over your peers.
+We believe the next big shift in the global workforce won’t be AI replacing people. It’ll be <b>people who know AI</b> replacing those who don’t.
+At <b>AI Activation Academy</b>, our mission is to help you stay ahead of that curve.
+Through <b>hands-on learning, real-world projects</b>, and <b>expert mentorship,</b> we prepare you to thrive in the AI-powered workplace not as an observer, but as a leader of change</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GenAI Section -->
+    <section class="genai-section fade-in">
+        <div class="container">
+            <div class="genai-content">
+                <div class="genai-text">
+                    <h2>Empowering the Next Generation of AI Talent</h2>
+                    <!--<p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI and we’re here to help you do just that." Horizontal infographic or stat highlights:
+                        <ul style="list-style-type: disc; margin-left: 3rem; line-height: 1.8;">
+                            <li>80% of jobs will require AI skills by 2030</li>
+                            <li>Generative AI adoption up 400% since 2023</li>
+                            <li>Global AI talent gap widening every year</li>
+                        </ul>
+
+                    </p>-->
+                    <p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI — and we’re here to help you do just that.</p>
+                        <!--
+                        <ul style="list-style-type: disc; margin-left: 2.5rem; line-height: 1.8; font-size: 16px;">
+                            <li>80% of jobs will require AI skills by 2030</li>
+                            <li>Generative AI adoption up 400% since 2023</li>
+                            <li>Global AI talent gap widening every year</li>
+                        </ul>-->
+                    <ul class="ai-stats">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" 
+                                stroke="#5548d9" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 5a3 3 0 0 0-3 3v1a2 2 0 0 1-2 2H6"/>
+                                <path d="M8 3a3 3 0 0 0-3 3v1a2 2 0 0 1-2 2H2"/>
+                                <path d="M12 5a3 3 0 0 1 3 3v1a2 2 0 0 0 2 2h1"/>
+                                <path d="M16 3a3 3 0 0 1 3 3v1a2 2 0 0 0 2 2h1"/>
+                            </svg>
+                            <span>76% of jobs will require AI skills by 2030</span>
+                        </li>
+
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                stroke="#5548d9" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4.5 16.5C3 19 2 21 2 21s3-.5 5.5-2.5l8-8a5 5 0 0 0-7-7l-8 8z"/>
+                                <path d="m9 7 4 4"/>
+                                <path d="m3 21 3-3"/>
+                            </svg>
+                            <span>Generative AI adoption up 304% since 2023</span>
+                        </li>
+
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                stroke="#5548d9" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20"/>
+                                <path d="M12 2a15.3 15.3 0 0 0 0 20"/>
+                            </svg>
+                            <span>Global AI talent gap widening every year</span>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+                    <button class="learn-more-btn">Learn More →</button>
+                </div>
+                <div class="genai-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <!--<svg width="30" height="30" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>-->
+                            <lottie-player
+                                src="assets/animations/smart_code.json"
+                                background="transparent"
+                                speed="1"
+                                loop
+                                autoplay
+                                style="width: 100%; height: 100%;">
+                            </lottie-player>
+                        </div>
+                        
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -910,9 +1024,12 @@
                     </lottie-player>
                     </div>
                     <h3>Fundamentals of LLM</h3>
-                    <p>Master the core ideas behind large language models from tokenization and transformers to fine-tuning and inference. Understand how modern LLMs reason, generate text, and power real-world applications in chatbots, assistants, and creative tools.</p>
-                    <p class="instructor-info">Instructors: Dr. Anu Raj</p>
-                    <a href="#" class="view-details">View Details →</a>
+                    <h4>Master the foundations of modern AI.</h4>
+                    <p> Learn the core ideas behind large language models, from attention mechanisms and transformer architectures that power ChatGPT and Gemini to fine-tuning and inference.
+                    Understand how LLMs reason, generate text, and drive real-world applications such as chatbots, assistants, and creative tools.
+                    </p>
+                    <!--<p class="instructor-info">Instructors: Dr. Anu Raj</p>
+                    <a href="#" class="view-details">View Details →</a>-->
                 </div>
 
                 <div class="program-card">
@@ -930,9 +1047,12 @@
                         </lottie-player>
                     </div>
                     <h3>Agentic AI</h3>
-                    <p>Learn to design and deploy autonomous AI agents that can reason, plan, and collaborate to achieve complex goals. Explore frameworks for memory-driven workflows, multi-agent coordination, and safe decision-making in real environments.</p>
-                    <p class="instructor-info">Instructors: Maria Chan</p>
-                    <a href="#" class="view-details">View Details →</a>
+                    <h4>Build intelligent systems that think and act.</h4>
+                    <p> Explore how to design and deploy AI agents that can reason, plan, and collaborate to achieve complex goals.
+                    Gain practical experience with frameworks for memory-driven workflows, tool use, and multi-agent coordination while learning safe and transparent decision-making techniques.
+                    </p>
+                    <!--<p class="instructor-info">Instructors: Maria Chan</p>
+                    <a href="#" class="view-details">View Details →</a>-->
                 </div>
 
                 <div class="program-card">
@@ -943,7 +1063,7 @@
                             <line x1="16" y1="13" x2="8" y2="13"/>
                             <line x1="16" y1="17" x2="8" y2="17"/>
                             <polyline points="10 9 9 9 8 9"/>
-                        </svg>-->
+                        </svg>-->   
                         <lottie-player
                             src="assets/animations/internship.json"
                             background="transparent"
@@ -954,56 +1074,11 @@
                     </lottie-player>
                     </div>
                     <h3>Real World Internship Experience </h3>
-                    <p>Work on live AI projects that solve real business challenges. Experience the complete development cycle from dataset preparation and model building to product deployment and client presentation under expert mentorship.</p>
-                    <p class="instructor-info">Instructors: Sam Richie & Jan Vector</p>
-                    <a href="#" class="view-details">View Details →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GenAI Section -->
-    <section class="genai-section fade-in">
-        <div class="container">
-            <div class="genai-content">
-                <div class="genai-text">
-                    <h2>Empowering the Next Generation of AI Talent</h2>
-                    <!--<p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI and we’re here to help you do just that." Horizontal infographic or stat highlights:
-                        <ul style="list-style-type: disc; margin-left: 3rem; line-height: 1.8;">
-                            <li>80% of jobs will require AI skills by 2030</li>
-                            <li>Generative AI adoption up 400% since 2023</li>
-                            <li>Global AI talent gap widening every year</li>
-                        </ul>
-
-                    </p>-->
-                    <p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI — and we’re here to help you do just that.</p>
-
-                        <ul style="list-style-type: disc; margin-left: 2.5rem; line-height: 1.8; font-size: 16px;">
-                            <li>80% of jobs will require AI skills by 2030</li>
-                            <li>Generative AI adoption up 400% since 2023</li>
-                            <li>Global AI talent gap widening every year</li>
-                        </ul>
-                    <button class="learn-more-btn">Learn More →</button>
-                </div>
-                <div class="genai-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <!--<svg width="30" height="30" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
-                                <polyline points="16 18 22 12 16 6"/>
-                                <polyline points="8 6 2 12 8 18"/>
-                            </svg>-->
-                            <lottie-player
-                                src="assets/animations/smart_code.json"
-                                background="transparent"
-                                speed="1"
-                                loop
-                                autoplay
-                                style="width: 100%; height: 100%;">
-                            </lottie-player>
-                        </div>
-                        
-                    </div>
-                    
+                    <h4>Apply your skills to real business challenges.</h4>
+                    <p> Work on live AI projects that mirror industry use cases.
+ Experience the full development cycle from data preparation and model training to product deployment and client presentation, guided by mentors who bring real-world perspective and expertise.</p>
+                    <!--<p class="instructor-info">Instructors: Sam Richie & Jan Vector</p>
+                    <a href="#" class="view-details">View Details →</a>-->
                 </div>
             </div>
         </div>
@@ -1019,34 +1094,37 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"The AI Foundations course was an eye-opener. It broke down complex topics into digestible lessons, giving me the confidence to experiment with my creative workflow. The hands-on projects were truly invaluable."</p>
+                    <p class="testimonial-text">“The AI Foundations course was an eye-opener. It simplified complex topics and gave me the confidence to use AI in my daily work. The hands-on projects helped me understand how real systems are built.”
+</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"></div>
                         <div class="author-info">
-                            <h4>Sarah L.</h4>
-                            <p>UX Designer</p>
+                            <h4> Ananya S.</h4>
+                            <p> Computer Science Student</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"As a developer, the Applied Agents course was a game-changer. I went from theory to building a functional AI chatbot with real-world mentorship and community support were outstanding."</p>
+                    <p class="testimonial-text">“The Applied Agents course completely changed how I think about AI. I actually built my first working chatbot and understood how autonomous agents function. The mentors were always available and supportive.”
+</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"></div>
                         <div class="author-info">
-                            <h4>Michael R.</h4>
-                            <p>Senior Software Automation</p>
+                            <h4> Rohit K.</h4>
+                            <p> Electrical Engineering Student</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"The AI Productization course is essential for any PM. It perfectly bridges the gap between AI innovation and how to launch and scale in a sustainable, efficient manner."</p>
+                    <p class="testimonial-text">“The AI Productization course helped me move from learning models to creating end-to-end solutions. It gave me practical exposure and clarity on how AI projects are built in real companies.”
+</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"></div>
                         <div class="author-info">
-                            <h4>Chloe K.</h4>
-                            <p>Product Manager</p>
+                            <h4>Priya N.</h4>
+                            <p> Data Science Graduate</p>
                         </div>
                     </div>
                 </div>
@@ -1084,11 +1162,12 @@
                 <div class="footer-section">
                     <h4>Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#join">Contact</a></li>
                     </ul>
+
                 </div>
 
                 <div class="footer-section">
@@ -1114,5 +1193,15 @@
             </div>
         </div>
     </footer>
+    <!-- Lucide Icon Loader -->
+    <!-- Load Lucide after everything -->
+    
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+
+
+
 </body>
 </html>
