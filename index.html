@@ -707,7 +707,31 @@
                 grid-template-columns: 1fr;
             }
         }
-
+        /*add these changes to make the website responsive for the mobile screen*/
+            @media (max-width: 480px) {
+                .logo-icon {
+                    width: 40px;
+                    height: 40px;
+                }
+            
+                .logo {
+                    font-size: 14px;
+                    gap: 6px;
+                }
+            }
+        @media (max-width: 480px) {
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap; /* Prevent wrapping */
+            }
+        
+            .cta-button {
+                display: none; /* hide big CTA button on phones */
+            }
+        }
+        /*new code ends here*/
         @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 28px;
