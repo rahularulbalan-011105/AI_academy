@@ -14,7 +14,7 @@
   
 
     <style>
-        * {
+      * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -843,6 +843,97 @@
             justify-content: center;
         }
         }
+/* -----------------------------------------
+   RESPONSIVE HEADER FIX (ADDED)
+------------------------------------------ */
+
+@media (max-width: 768px) {
+
+    /* Prevent header items from breaking */
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+    }
+
+    /* Make logo smaller so it fits on one line */
+    .logo-icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+    }
+
+    /* Hide nav links on mobile */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* Ensure CTA stays aligned */
+    #join-header-btn {
+        white-space: nowrap;
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    /* Make mobile menu icon visible */
+    .mobile-menu-btn {
+        display: block !important;
+        font-size: 26px !important;
+    }
+}
+/* --- MOBILE HEADER FIX: HIDE CTA BUTTON --- */
+@media (max-width: 768px) {
+    #join-header-btn {
+        display: none !important;
+    }
+}
+/* MOBILE DROPDOWN MENU */
+/* -------------------------------
+   MOBILE MENU DROPDOWN FIX
+-------------------------------- */
+@media (max-width: 768px) {
+
+    /* Make header perfect */
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Hide normal nav links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;           /* appears BELOW header */
+        right: 20px;
+        background: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        gap: 15px;
+        z-index: 999;
+    }
+
+    /* Show when active */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* Remove Join Button on Mobile */
+    #join-header-btn {
+        display: none;
+    }
+}
 
     </style>
 </head>
@@ -866,6 +957,7 @@
                 <button class="cta-button" id="join-header-btn">Join the Academy</button>
 
                 <button class="mobile-menu-btn">☰</button>
+
             </nav>
         </div>
     </header>
