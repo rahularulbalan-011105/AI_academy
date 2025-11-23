@@ -858,7 +858,7 @@
         gap: 12px !important;
     }
     header {
-        padding: 20px 0 !important;   /* previously ~20px */
+        padding: 28px 0 !important;   /* previously ~20px */
     }
 
     nav {
@@ -938,6 +938,36 @@
     /* Remove Join Button on Mobile */
     #join-header-btn {
         display: none;
+    }
+}
+/* MOBILE HEADER SPACING FIX */
+@media (max-width: 768px) {
+
+    /* Push entire logo section closer to the left */
+    header .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Reduce space between logo image and text */
+    .logo {
+        gap: 6px !important;   /* reduce gap */
+    }
+
+    /* Increase logo size slightly */
+    .logo-icon {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    /* Reduce the extra internal padding inside header */
+    header {
+        padding: 12px 0 !important;
+    }
+
+    /* Align burger icon to the far right properly */
+    .mobile-menu-btn {
+        margin-right: 5px !important;
     }
 }
 
