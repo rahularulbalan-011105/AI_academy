@@ -857,18 +857,24 @@
         flex-wrap: nowrap !important;
         gap: 12px !important;
     }
-
-    /* Make logo smaller so it fits on one line */
-    .logo-icon {
-        width: 80px !important;
-        height: 80px !important;
+    header {
+        padding: 28px 0 !important;   /* previously ~20px */
     }
 
-    .logo {
-        display: flex;
+    nav {
+        height: auto;
+        padding: 0 10px;
         align-items: center;
-        gap: 10px;
-        white-space: nowrap;
+    }
+    /* Make logo smaller so it fits on one line */
+.logo-icon {
+        width: 75px !important;       /* bigger */
+        height: 75px !important;
+        border-radius: 10px;
+    }
+   .logo {
+        font-size: 20px !important;   /* previously 18px */
+        gap: 12px;
     }
 
     /* Hide nav links on mobile */
