@@ -874,7 +874,7 @@
     }
    .logo {
         font-size: 20px !important;   /* previously 18px */
-        gap: 12px;
+        gap: 3px;
     }
 
     /* Hide nav links on mobile */
@@ -951,13 +951,17 @@
 
     /* Reduce space between logo image and text */
     .logo {
-        gap: 6px !important;   /* reduce gap */
+        gap: 3px !important;   /* reduce gap */
     }
 
     /* Increase logo size slightly */
     .logo-icon {
         width: 70px !important;
         height: 70px !important;
+    }
+    .logo-icon img {
+        margin-right: 0 !important; /* remove hidden inner spacing */
+        display: block;
     }
 
     /* Reduce the extra internal padding inside header */
