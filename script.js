@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
+/*
   // ---------- 2️⃣ Mobile Menu Toggle ----------
   const menuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
@@ -35,6 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector('#join')?.scrollIntoView({ behavior: 'smooth' });
     });
   }
+*/
+// ---------- Mobile Menu Toggle ----------
+// ----- MOBILE MENU TOGGLE -----
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 
   // ---------- 3️⃣ Scroll-to Section Buttons ----------
   const startLearningBtn = document.querySelector('.btn-primary');
