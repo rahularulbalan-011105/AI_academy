@@ -13,6 +13,1409 @@
     <script src="script.js"></script>
   
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Activation Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="script.js"></script>
+  
+
+    <style>
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            color: #1a1a2e;
+        }
+
+        .logo-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a4a68;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #5548d9;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #5548d9, #7b61ff);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #4239b8;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #6b6b7e;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #5548d9;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #4239b8;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #5548d9;
+            padding: 14px 28px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: #5548d9;
+        }
+/*
+        .hero-image {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 80px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+*/
+        .hero-image {
+  width: 500px;       /* Fixed width */
+  height: 400px;      /* Fixed height */
+  background: #f9fafb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;   /* Prevent overflow from animation */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.hero-image lottie-player {
+  width: 100%;
+  height: 100%;
+}
+        .image-icon {
+            width: 60px;
+            height: 60px;
+            border: 2px dashed #c0c0c8;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .image-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: #999;
+        }
+
+        .image-placeholder {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            padding: 50px 0;
+            background: #fafafa;
+        }
+
+        .vision-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .vision-image {
+            width: 500px;       /* fixed width */
+            height: 300px;      /* fixed height */
+            background: #fafafa;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .vision-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1a1a2e;
+        }
+
+        .vision-text p {
+            font-size: 16px;
+            color: #6b6b7e;
+            margin-bottom: 20px;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #6b6b7e;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .program-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s;
+        }
+
+        .program-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .program-icon {
+            width: 80px;
+            height: 80px;
+            background: #f0edff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .program-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .program-card p {
+            font-size: 15px;
+            color: #6b6b7e;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .instructor-info {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .view-details {
+            color: #5548d9;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .view-details:hover {
+            gap: 8px;
+        }
+
+        /* GenAI Section */
+        .genai-section {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .genai-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .genai-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1a1a2e;
+        }
+
+        .genai-text p {
+            font-size: 16px;
+            color: #6b6b7e;
+            margin-bottom: 30px;
+        }
+
+        .learn-more-btn {
+            /*background: #5548d9;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;*/
+        }
+        .learn-more-btn {
+            background: linear-gradient(135deg, #5548d9, #7b61ff);
+            color: white;
+            padding: 14px 36px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(85, 72, 217, 0.25);
+            }
+
+            .learn-more-btn:hover {
+            background: linear-gradient(135deg, #4239b8, #6c4afc);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(85, 72, 217, 0.35);
+            }
+
+            /* Align it neatly within the GenAI section */
+.genai-text {
+  text-align: left;
+}
+
+.genai-text .learn-more-btn {
+  margin-left: 2.5rem; /* aligns it under the bullet list */
+}
+
+
+        
+
+        .feature-item {
+            text-align: center;
+        }
+
+        
+        .feature-item {
+        text-align: center;
+                       
+        }
+
+        .feature-icon {
+        width: 400px;         /* fixed visible width */
+        height: 400px;        /* fixed visible height */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+             /* prevents animation box from expanding */
+        position: relative;
+        }
+
+        .feature-icon lottie-player {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.2);   /* enlarge animation inside same box */
+        transform-origin: center;
+        }
+        
+        
+        .feature-item p {
+        font-size: 14px;
+        color: #4a4a68;
+        font-weight: 600;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: #4a4a68;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .author-info h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 3px;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: #fafafa;
+        }
+
+        .cta-content {
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .cta-content p {
+            font-size: 16px;
+            color: #6b6b7e;
+            margin-bottom: 30px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            background: white;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #6b6b7e;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #5548d9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #5548d9;
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #e8e8e8;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+       
+
+/* FIX AI STATS ICONS */
+.ai-stats li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    line-height: 1.8rem !important;
+}
+
+.ai-stats li svg {
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    opacity: 1 !important;
+    stroke: #5548d9;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .vision-content {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .genai-content {
+                grid-template-columns: 1fr;
+            }
+
+            .genai-features {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .genai-features {
+                grid-template-columns: 1fr;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        /*add these changes to make the website responsive for the mobile screen*/
+            @media (max-width: 480px) {
+                .logo-icon {
+                    width: 40px;
+                    height: 40px;
+                }
+            
+                .logo {
+                    font-size: 14px;
+                    gap: 6px;
+                }
+            }
+        @media (max-width: 480px) {
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap; /* Prevent wrapping */
+            }
+        
+            .cta-button {
+                display: none; /* hide big CTA button on phones */
+            }
+        }
+        /*new code ends here*/
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+        }
+        /* --- Global Responsive Enhancements --- */
+        img, video, lottie-player {
+        max-width: 100%;
+        height: auto;
+        }
+
+        /* Fix for bullet list alignment in GenAI section */
+        .genai-text ul {
+        margin-left: 2rem;
+        padding-left: 1rem;
+        line-height: 1.8;
+        }
+
+        /* Allow text and animation to stack on smaller screens */
+        @media (max-width: 1024px) {
+        .hero-grid,
+        .vision-content,
+        .genai-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .hero-image,
+        .vision-image,
+        .feature-icon {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+        }
+
+        .vision-text h2,
+        .genai-text h2 {
+            font-size: 2rem;
+        }
+
+        .genai-text p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        }
+
+        /* Make course cards stack neatly on tablet and mobile */
+        @media (max-width: 900px) {
+        .programs-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        }
+
+        @media (max-width: 600px) {
+        .programs-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .program-card {
+            text-align: center;
+        }
+
+        .program-icon {
+            margin: 0 auto 15px;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            width: 100%;
+        }
+        }
+
+        /* Footer fix for smaller devices */
+        @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            justify-content: center;
+        }
+        }
+/* -----------------------------------------
+   RESPONSIVE HEADER FIX (ADDED)
+------------------------------------------ */
+
+@media (max-width: 768px) {
+
+    /* Prevent header items from breaking */
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+    }
+    header {
+        padding: 28px 0 !important;   /* previously ~20px */
+    }
+
+    nav {
+        height: auto;
+        padding: 0 10px;
+        align-items: center;
+    }
+    /* Make logo smaller so it fits on one line */
+.logo-icon {
+        width: 75px !important;       /* bigger */
+        height: 75px !important;
+        border-radius: 10px;
+    }
+   .logo {
+        font-size: 20px !important;   /* previously 18px */
+        gap: 12px;
+    }
+
+    /* Hide nav links on mobile */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* Ensure CTA stays aligned */
+    #join-header-btn {
+        white-space: nowrap;
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    /* Make mobile menu icon visible */
+    .mobile-menu-btn {
+        display: block !important;
+        font-size: 26px !important;
+    }
+}
+/* --- MOBILE HEADER FIX: HIDE CTA BUTTON --- */
+@media (max-width: 768px) {
+    #join-header-btn {
+        display: none !important;
+    }
+}
+/* MOBILE DROPDOWN MENU */
+/* -------------------------------
+   MOBILE MENU DROPDOWN FIX
+-------------------------------- */
+@media (max-width: 768px) {
+
+    /* Make header perfect */
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Hide normal nav links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;           /* appears BELOW header */
+        right: 20px;
+        background: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        gap: 15px;
+        z-index: 999;
+    }
+
+    /* Show when active */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* Remove Join Button on Mobile */
+    #join-header-btn {
+        display: none;
+    }
+}
+/* MOBILE HEADER SPACING FIX */
+@media (max-width: 768px) {
+
+    /* Push entire logo section closer to the left */
+    header .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Reduce space between logo image and text */
+    .logo {
+        gap: 6px !important;   /* reduce gap */
+    }
+
+    /* Increase logo size slightly */
+    .logo-icon {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    /* Reduce the extra internal padding inside header */
+    header {
+        padding: 12px 0 !important;
+    }
+
+    /* Align burger icon to the far right properly */
+    .mobile-menu-btn {
+        margin-right: 5px !important;
+    }
+}
+/* 🔥 MAX TIGHT HEADER LOGO SPACING */
+@media (max-width: 768px) {
+
+    /* Remove container padding pushing logo inward */
+    header .container,
+    nav {
+        padding-left: 8px !important;
+    }
+
+    /* Zero spacing between logo icon + text */
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap:7px !important;  /* ← change to 0px if you want them touching */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Remove all spacing inside the icon box */
+    .logo-icon {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 35px !important;
+        height: 35px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Remove default image whitespace */
+    .logo-icon img {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/logo_cropped.png" alt="AI Activation Academy Logo">
+                    </div>
+
+                    AI Activation Academy
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+                <button class="cta-button" id="join-header-btn">Join the Academy</button>
+
+                <button class="mobile-menu-btn">☰</button>
+
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Activate Your AI Potential</h1>
+                <p>Master the skills shaping the future of work. Learn. Build. Lead the AI revolution.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Start Learning</button>
+                    <button class="btn-secondary">Join Now</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!--
+                <div class="image-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                </div>-->
+            <lottie-player 
+                src="assets/animations/Work_Hard.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 100%; height: 100%;">
+        </lottie-player>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="about" class="vision-section fade-in">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-image">
+                    <!--<div class="image-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>-->
+                    <lottie-player
+                        src="assets/animations/our_vision.json"
+                        background="transparent"
+                        speed="1"
+                        loop
+                        autoplay
+                        style="width: 100%; height: 100%;">
+                    </lottie-player>
+                
+                </div>
+                <div class="vision-text">
+                    <h2>Our Vision for the Future of Work</h2>
+                    <p>AI is no longer a niche skill! It’s fast becoming a <b>core capability</b> for every professional.
+Whether you’re in marketing, finance, design, operations, or engineering, knowing how to work with AI gives you a powerful edge over your peers.
+We believe the next big shift in the global workforce won’t be AI replacing people. It’ll be <b>people who know AI</b> replacing those who don’t.
+At <b>AI Activation Academy</b>, our mission is to help you stay ahead of that curve.
+Through <b>hands-on learning, real-world projects</b>, and <b>expert mentorship,</b> we prepare you to thrive in the AI-powered workplace not as an observer, but as a leader of change</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GenAI Section -->
+    <section class="genai-section fade-in">
+        <div class="container">
+            <div class="genai-content">
+                <div class="genai-text">
+                    <h2>Empowering the Next Generation of AI Talent</h2>
+                    <!--<p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI and we’re here to help you do just that." Horizontal infographic or stat highlights:
+                        <ul style="list-style-type: disc; margin-left: 3rem; line-height: 1.8;">
+                            <li>80% of jobs will require AI skills by 2030</li>
+                            <li>Generative AI adoption up 400% since 2023</li>
+                            <li>Global AI talent gap widening every year</li>
+                        </ul>
+
+                    </p>-->
+                    <p>Generative AI is transforming the way we think, create, and work. Whether you’re an engineer, analyst, designer, or marketer, AI literacy is now a core career skill. The future belongs to those who can harness AI — and we’re here to help you do just that.</p>
+                        <!--
+                        <ul style="list-style-type: disc; margin-left: 2.5rem; line-height: 1.8; font-size: 16px;">
+                            <li>80% of jobs will require AI skills by 2030</li>
+                            <li>Generative AI adoption up 400% since 2023</li>
+                            <li>Global AI talent gap widening every year</li>
+                        </ul>-->
+                    <ul class="ai-stats">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" 
+                                stroke="#5548d9" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 5a3 3 0 0 0-3 3v1a2 2 0 0 1-2 2H6"/>
+                                <path d="M8 3a3 3 0 0 0-3 3v1a2 2 0 0 1-2 2H2"/>
+                                <path d="M12 5a3 3 0 0 1 3 3v1a2 2 0 0 0 2 2h1"/>
+                                <path d="M16 3a3 3 0 0 1 3 3v1a2 2 0 0 0 2 2h1"/>
+                            </svg>
+                            <span>76% of jobs will require AI skills by 2030</span>
+                        </li>
+
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                stroke="#5548d9" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4.5 16.5C3 19 2 21 2 21s3-.5 5.5-2.5l8-8a5 5 0 0 0-7-7l-8 8z"/>
+                                <path d="m9 7 4 4"/>
+                                <path d="m3 21 3-3"/>
+                            </svg>
+                            <span>Generative AI adoption up 304% since 2023</span>
+                        </li>
+
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                stroke="#5548d9" fill="none" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20"/>
+                                <path d="M12 2a15.3 15.3 0 0 0 0 20"/>
+                            </svg>
+                            <span>Global AI talent gap widening every year</span>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+                    <button class="learn-more-btn">Learn More →</button>
+                </div>
+                <div class="genai-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <!--<svg width="30" height="30" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>-->
+                            <lottie-player
+                                src="assets/animations/smart_code.json"
+                                background="transparent"
+                                speed="1"
+                                loop
+                                autoplay
+                                style="width: 100%; height: 100%;">
+                            </lottie-player>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="courses" class="programs-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Programs</h2>
+                <p>Expert-led courses to take you from concept to creation.</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon" style="background: #f0edff;">
+                        <!--<svg width="24" height="24" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m5.66-13.66l-4.24 4.24m0 6l-4.24 4.24m13.66-5.66h-6m-6 0H1"/>
+                        </svg>-->
+                        <lottie-player
+                            src="assets/animations/LLM.json"
+                            background="transparent"
+                            speed="1"
+                        loop
+                        autoplay
+                        style="width: 100%; height: 100%;">
+                    </lottie-player>
+                    </div>
+                    <h3>Fundamentals of LLM</h3>
+                    <h4>Master the foundations of modern AI.</h4>
+                    <p> Learn the core ideas behind large language models, from attention mechanisms and transformer architectures that power ChatGPT and Gemini to fine-tuning and inference.
+                    Understand how LLMs reason, generate text, and drive real-world applications such as chatbots, assistants, and creative tools.
+                    </p>
+                    <!--<p class="instructor-info">Instructors: Dr. Anu Raj</p>
+                    <a href="#" class="view-details">View Details →</a>-->
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon" style="background: #e8f4ff;">
+                        <!--<svg width="24" height="24" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>-->
+                        <lottie-player
+                            src="assets/animations/agnetic.json"
+                            background="transparent"
+                            speed="1"
+                            loop
+                            autoplay
+                            style="width: 100%; height: 100%;">
+                        </lottie-player>
+                    </div>
+                    <h3>Agentic AI</h3>
+                    <h4>Build intelligent systems that think and act.</h4>
+                    <p> Explore how to design and deploy AI agents that can reason, plan, and collaborate to achieve complex goals.
+                    Gain practical experience with frameworks for memory-driven workflows, tool use, and multi-agent coordination while learning safe and transparent decision-making techniques.
+                    </p>
+                    <!--<p class="instructor-info">Instructors: Maria Chan</p>
+                    <a href="#" class="view-details">View Details →</a>-->
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon" style="background: #fff0f0;">
+                        <!--<svg width="24" height="24" fill="none" stroke="#5548d9" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>-->   
+                        <lottie-player
+                            src="assets/animations/internship.json"
+                            background="transparent"
+                            speed="1"
+                            loop
+                            autoplay
+                            style="width: 100%; height: 100%;">
+                    </lottie-player>
+                    </div>
+                    <h3>Real World Internship Experience </h3>
+                    <h4>Apply your skills to real business challenges.</h4>
+                    <p> Work on live AI projects that mirror industry use cases.
+ Experience the full development cycle from data preparation and model training to product deployment and client presentation, guided by mentors who bring real-world perspective and expertise.</p>
+                    <!--<p class="instructor-info">Instructors: Sam Richie & Jan Vector</p>
+                    <a href="#" class="view-details">View Details →</a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section fade-in">
+
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Students Say</h2>
+                <p>Real stories from creators and professionals who have activated their potential.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">“The AI Foundations course was an eye-opener. It simplified complex topics and gave me the confidence to use AI in my daily work. The hands-on projects helped me understand how real systems are built.”
+</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4> Ananya S.</h4>
+                            <p> Computer Science Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">“The Applied Agents course completely changed how I think about AI. I actually built my first working chatbot and understood how autonomous agents function. The mentors were always available and supportive.”
+</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4> Rohit K.</h4>
+                            <p> Electrical Engineering Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">“The AI Productization course helped me move from learning models to creating end-to-end solutions. It gave me practical exposure and clarity on how AI projects are built in real companies.”
+</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Priya N.</h4>
+                            <p> Data Science Graduate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="join" class="cta-section fade-in">
+
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the Academy Today</h2>
+                <p>Sign up for updates on new courses, workshops, and exclusive content.</p>
+                <form class="email-form">
+                    <input type="email" class="email-input" placeholder="Enter your email">
+                    <button type="submit" class="cta-button">Join Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img src="assets/logo.png" alt="AI Activation Academy Logo">
+                        </div>
+
+                        AI Activation Academy
+                    </div>
+                    <p>Empowering the next wave of AI-driven creators and innovators.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#join">Contact</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 AI Activation Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Lucide Icon Loader -->
+    <!-- Load Lucide after everything -->
+    
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+
+
+
+</body>
+</html>
+
+
     <style>
       * {
             margin: 0;
